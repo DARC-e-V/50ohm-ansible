@@ -2,4 +2,5 @@
   ansible.builtin.command: uv run python3 ./build.py
   args:
     chdir: "{{ destination_path }}/50ohm"
+  become: true
   become_user: "{{ fiftyohm_user }}"
