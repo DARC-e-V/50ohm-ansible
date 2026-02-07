@@ -11,8 +11,9 @@
     repo: https://github.com/DARC-e-V/50ohm.git
     dest: "{{ destination_path }}/50ohm"
     single_branch: true
-    version: refactor/migrate-from-directus-to-git
+    version: "{{ fiftyohm_branch }}"
     force: true
+  become: true
   become_user: "{{ fiftyohm_user }}"
 
 - name: Checkout 50ohm-contents-dl from https://github.com/DARC-e-V/50ohm-contents-dl to {{ destination_path }}
@@ -20,7 +21,8 @@
     repo: https://github.com/DARC-e-V/50ohm-contents-dl.git
     dest: "{{ destination_path }}/50ohm-contents-dl"
     single_branch: true
-    version: HEAD
+    version: "{{ fiftyohm_contents_dl_branch }}"
+  become: true
   become_user: "{{ fiftyohm_user }}"
 
 - name: Create {{ destination_path }}/50ohm/config/config.json
