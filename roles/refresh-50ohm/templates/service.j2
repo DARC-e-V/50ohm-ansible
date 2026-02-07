@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh 50ohm.de with a timer
+
+[Service]
+Type=oneshot
+ExecStart={{ destination_path }}/refresh-50ohm.sh
+User={{ fiftyohm_user }}
+WorkingDirectory={{ destination_path }}/
+
+[Install]
+WantedBy=multi-user.target

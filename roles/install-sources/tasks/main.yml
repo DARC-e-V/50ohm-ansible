@@ -1,0 +1,43 @@
+- name: Create destination directory {{ destination_path }}
+  ansible.builtin.file:
+    dest: "{{ destination_path }}"
+    state: directory
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0755'
+
+- name: Checkout 50ohm source from https://github.com/DARC-e-V/50ohm to {{ destination_path }}/
+  ansible.builtin.git:
+    repo: https://github.com/DARC-e-V/50ohm.git
+    dest: "{{ destination_path }}/50ohm"
+    single_branch: true
+    version: refactor/migrate-from-directus-to-git
+    force: true
+  become_user: "{{ fiftyohm_user }}"
+
+- name: Checkout 50ohm-contents-dl from https://github.com/DARC-e-V/50ohm-contents-dl to {{ destination_path }}
+  ansible.builtin.git:
+    repo: https://github.com/DARC-e-V/50ohm-contents-dl.git
+    dest: "{{ destination_path }}/50ohm-contents-dl"
+    single_branch: true
+    version: HEAD
+  become_user: "{{ fiftyohm_user }}"
+
+- name: Create {{ destination_path }}/50ohm/config/config.json
+  ansible.builtin.copy:
+    dest: "{{ destination_path }}/50ohm/config/config.json"
+    content: >
+      {
+        "content_path": "../50ohm-contents-dl"
+      }
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0444'
+
+- name: Install url_shortener.conf in /srv/50ohm.de/url_shortener.conf
+  ansible.builtin.copy:
+    src: files/url_shortener.conf
+    dest: /srv/50ohm.de/url_shortener.conf
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0644'

@@ -1,0 +1,5 @@
+- name: Run build.py in {{ destination_path }}/50ohm
+  ansible.builtin.command: uv run python3 ./build.py
+  args:
+    chdir: "{{ destination_path }}/50ohm"
+  become_user: "{{ fiftyohm_user }}"

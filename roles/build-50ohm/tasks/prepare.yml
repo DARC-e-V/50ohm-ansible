@@ -1,0 +1,13 @@
+- name: Run uv venv in {{ destination_path }}/50ohm
+  ansible.builtin.command: uv venv
+  args:
+    chdir: "{{ destination_path }}/50ohm"
+    creates: "{{ destination_path }}/50ohm/.venv"
+  become_user: "{{ fiftyohm_user }}"
+
+- name: Install dependencies with uv pip in {{ destination_path }}/50ohm
+  ansible.builtin.command: uv pip sync requirements.txt
+  args:
+    chdir: "{{ destination_path }}/50ohm"
+    creates: "{{ destination_path }}/50ohm/.venv/lib/python3.*/site-packages/uv"
+  become_user: "{{ fiftyohm_user }}"

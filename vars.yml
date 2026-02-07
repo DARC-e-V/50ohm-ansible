@@ -1,0 +1,77 @@
+fiftyohm_user: fiftyohm
+fiftyohm_group: fiftyohm
+destination_path: /srv/50ohm.de
+50ohm_branch: main
+50ohm_contents_dl_branch: main
+
+certbot_install_method: package
+certbot_auto_renew: true
+certbot_auto_renew_user: www-data
+certbot_auto_renew_hour: "5"
+certbot_auto_renew_minute: "15"
+certbot_create_if_missing: true
+certbot_create_method: webroot
+certbot_admin_email: 50ohm@darc.de
+certbot_certs:
+  - domains:
+      - 50ohm.de
+      - www.50ohm.de
+    webroot: "{{ destination_path }}/letsencrypt"
+
+nginx_listen_ipv6: true
+nginx_remove_default_vhost: true
+nginx_user: www-data
+nginx_worker_processes: "{{ ansible_processor_vcpus|default(ansible_processor_count) }}"
+nginx_worker_connections: "1024"
+nginx_multi_accept: "off"
+nginx_error_log: "/var/log/nginx/error.log warn"
+nginx_accept_log: "/var/log/nginx/access.log main buffer=16k flush=2m"
+nginx_vhosts:
+  - server_name: "50ohm.de"
+    listen: "443 ssl http2"
+    filename: 50ohm-https.conf
+    root: "{{ destination_path }}/50ohm/build"
+    index: "index.html"
+    state: "present"
+    extra_parameters: |
+      location "/" {
+        try_files $uri $uri/ =404;
+      }
+      # The old website from July 2025
+      location "/past" {
+        rewrite ^/past$ /past/ permanent;
+        alias /var/www/50ohm.de/;
+        try_files $uri $uri/ =404;
+      }
+      # Set to a different path for testing purposes
+      location "/future" {
+        rewrite ^/future$ /future/ permanent;
+        alias {{ destination_path }}/50ohm/build/;
+        try_files $uri $uri/ =404;
+      }
+
+      ssl_certificate /etc/letsencrypt/live/50ohm.de/fullchain.pem;
+      ssl_certificate_key /etc/letsencrypt/live/50ohm.de/privkey.pem;
+      include /srv/50ohm.de/url_shortener.conf;
+  - server_name: "www.50ohm.de"
+    listen: "443 ssl http2"
+    filename: 50ohm-https-redirect.conf
+    state: "present"
+    extra_parameters: |
+      ssl_certificate /etc/letsencrypt/live/50ohm.de/fullchain.pem;
+      ssl_certificate_key /etc/letsencrypt/live/50ohm.de/privkey.pem;
+      return 301 https://50ohm.de$request_uri;
+  - server_name: "50ohm.de"
+    listen: "80"
+    filename: 50ohm-http.conf
+    server_name_redirect: "www.50ohm.de"
+    root: "{{ destination_path }}/50ohm/build"
+    state: "present"
+    extra_parameters: |
+      # Add the letsencrypt webroot for certbot challenges
+      location "/.well-known/acme-challenge/" {
+        root {{ destination_path }}/letsencrypt;
+      }
+      location "/" {
+        return 301 https://50ohm.de$request_uri;
+      }
