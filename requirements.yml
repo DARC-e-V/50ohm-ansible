@@ -1,0 +1,5 @@
+roles:
+  - name: geerlingguy.certbot
+    version: ">=5.4.1"
+  - name: geerlingguy.nginx
+    version: ">=3.3.0"

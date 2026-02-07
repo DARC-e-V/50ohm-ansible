@@ -1,0 +1,5 @@
+- name: Run tasks from prepare.yml
+  ansible.builtin.include_tasks: prepare.yml
+
+- name: Run tasks from build.yml
+  ansible.builtin.include_tasks: build.yml

@@ -1,0 +1,5 @@
+- name: Include tasks from users.yml
+  ansible.builtin.include_tasks: users.yml
+
+- name: Include tasks from packages.yml
+  ansible.builtin.include_tasks: packages.yml

@@ -1,0 +1,38 @@
+# Installs the base system, builds & installs 50ohm server from source
+- name: Install 50ohm server
+  hosts: webservers
+  become: true
+  vars_files:
+    - vars.yml
+    - users.yml
+  roles:
+    - base
+    - install-sources
+    - build-50ohm
+  tags:
+    - base
+    - build
+
+# Obtain a TLS certificate for 50ohm.de using geerlingguy.certbot & configure nginx using geerlingguy.nginx
+- name: Configure TLS for 50ohm.de
+  hosts: webservers
+  become: true
+  vars_files:
+    - vars.yml
+  roles:
+    - geerlingguy.certbot
+    - geerlingguy.nginx
+  tags:
+    - webserver
+
+# Setup systemd-timer for 50ohm-contents-dl renewal & build of 50ohm
+- name: Setup systemd timer for 50ohm-contents-dl renewal & build
+  hosts: webservers
+  become: true
+  vars_files:
+    - vars.yml
+  roles:
+    - refresh-50ohm
+  tags:
+    - build
+    - timer

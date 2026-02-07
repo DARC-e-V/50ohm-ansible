@@ -1,0 +1,45 @@
+- name: Ensure 'sudo' group exists
+  ansible.builtin.group:
+    name: sudo
+    state: present
+
+- name: Create users from users.yml
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    shell: "{{ item.shell | default('/bin/bash') }}"
+    password: "!"
+    update_password: on_create
+    groups:
+      - sudo
+    state: present
+  loop: "{{ users | flatten(levels=1)}}"
+
+- name: Add SSH keys for users
+  ansible.builtin.authorized_key:
+    user: "{{ item.name }}"
+    state: present
+    key: "{{ item.sshkeys }}"
+  loop: "{{ users | flatten(levels=1) }}"
+
+- name: Ensure sudo group has passwordless sudo access
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/sudo-nopasswd
+    state: present
+    create: true
+    line: "%sudo ALL=(ALL) NOPASSWD: ALL"
+    validate: '/usr/sbin/visudo -cf %s'
+    mode: '0440'
+
+- name: Ensure sudoers uses sudoers.d
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    state: present
+    line: "@includedir /etc/sudoers.d"
+    validate: '/usr/sbin/visudo -cf %s'
+
+- name: Ensure ex-users are removed
+  ansible.builtin.user:
+    name: "{{ item }}"
+    state: absent
+    remove: true
+  loop: "{{ ex_users | flatten(levels=1) }}"

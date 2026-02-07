@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for refreshing 50ohm.de
+
+[Timer]
+OnBootSec=5min
+OnUnitAciveSec=15min
+Unit=refresh-50ohm.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,30 @@
+- name: Install refresh-50ohm.sh in {{ destination_path }}/refresh-50ohm.sh
+  ansible.builtin.copy:
+    src: files/refresh-50ohm.sh
+    dest: "{{ destination_path }}/refresh-50ohm.sh"
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0755'
+
+- name: Install systemd timer unit for 50ohm refresh in /etc/systemd/system/refresh-50ohm.timer
+  ansible.builtin.template:
+    src: templates/timer.j2
+    dest: /etc/systemd/system/refresh-50ohm.timer
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Install systemd service unit for 50ohm refresh in /etc/systemd/system/refresh-50ohm.service
+  ansible.builtin.template:
+    src: templates/service.j2
+    dest: /etc/systemd/system/refresh-50ohm.service
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Enable and start refresh-50ohm.timer
+  ansible.builtin.systemd:
+    name: refresh-50ohm.timer
+    enabled: true
+    state: started
+    daemon_reload: true

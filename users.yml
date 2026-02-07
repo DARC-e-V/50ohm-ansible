@@ -1,0 +1,13 @@
+ex_users: []
+
+users:
+  - {
+      name: "dc4lw",
+      sshkeys: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJQ5A3Ea1vKUh63Gkv6CyK2pIHbEBe8ggs+kwHi3F3h",
+      state: "present",
+    }
+  - {
+      name: "dl9mj",
+      sshkeys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9fle0ZeS+KOrC+sY+uUQhn+BObbUHbFyaMXvCotACTGt0IBxA8gDG0SSCU/TlW69B4SJA0vgVVVGmXlYpqBx4RbeaPzDn0Ui8AAR5msn+eYWmGREDyQam1ZhFAlKyfU3efwbv7Uu0VeWzamwmrdihhUnsw+kvokZOH5LZzA/if0Yw7SV/hkU/QeAahciYSVTzZLzCmJFK6kMwgR9Doix/gjm69s5lOGvXldfm2LcMdiXdBFdKxG//z1Xn+69fWUg2LLilsz/cy4sGinCxpt5UQs3/VpR/JQO8rGhTEJno5vcFRVnMSv1Cp2VMh+2UXCQKSRRjKfOpsHyz8boFrEjr",
+      state: "present",
+  }
