@@ -1,8 +1,8 @@
 fiftyohm_user: fiftyohm
 fiftyohm_group: fiftyohm
 destination_path: /srv/50ohm.de
-50ohm_branch: main
-50ohm_contents_dl_branch: main
+fiftyohm_branch: main
+fiftyohm_contents_dl_branch: main
 
 certbot_install_method: package
 certbot_auto_renew: true
