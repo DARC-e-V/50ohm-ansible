@@ -43,3 +43,4 @@
     owner: "{{ fiftyohm_user }}"
     group: "{{ fiftyohm_group }}"
     mode: '0644'
+  notify: Reload nginx to apply new configuration
