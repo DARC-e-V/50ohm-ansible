@@ -30,7 +30,7 @@
     dest: "{{ destination_path }}/50ohm/config/config.json"
     content: >
       {
-        "content_path": "../50ohm-contents-dl"
+        "input": "../50ohm-contents-dl"
       }
     owner: "{{ fiftyohm_user }}"
     group: "{{ fiftyohm_group }}"
