@@ -4,4 +4,5 @@ set -euo pipefail
 git -C 50ohm pull
 git -C 50ohm-contents-dl pull
 cd 50ohm
+uv sync
 uv run python3 ./build.py
