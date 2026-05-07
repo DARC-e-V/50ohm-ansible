@@ -1,4 +1,3 @@
----
 - name: Side effect
   hosts: all
   gather_facts: false
