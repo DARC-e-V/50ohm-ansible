@@ -3,10 +3,12 @@
   args:
     chdir: "{{ destination_path }}/50ohm"
     creates: "{{ destination_path }}/50ohm/.venv"
+  become: true
   become_user: "{{ fiftyohm_user }}"
 
 - name: Install or update uv project in {{ destination_path }}/50ohm
   ansible.builtin.command: uv sync
   args:
     chdir: "{{ destination_path }}/50ohm"
+  become: true
   become_user: "{{ fiftyohm_user }}"
