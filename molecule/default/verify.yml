@@ -1,0 +1,45 @@
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Check destination directory exists and is owned by fiftyohm
+      ansible.builtin.stat:
+        path: /srv/50ohm.de
+      register: dest_dir
+      failed_when: not dest_dir.stat.exists or dest_dir.stat.pw_name != 'fiftyohm'
+
+    - name: Check 50ohm repo is cloned
+      ansible.builtin.stat:
+        path: /srv/50ohm.de/50ohm/.git
+      register: repo_stat
+      failed_when: not repo_stat.stat.exists
+
+    - name: Check 50ohm-contents-dl repo is cloned
+      ansible.builtin.stat:
+        path: /srv/50ohm.de/50ohm-contents-dl/.git
+      register: contents_stat
+      failed_when: not contents_stat.stat.exists
+
+    - name: Check venv exists
+      ansible.builtin.stat:
+        path: /srv/50ohm.de/50ohm/.venv
+      register: venv_stat
+      failed_when: not venv_stat.stat.exists
+
+    - name: Check build output exists
+      ansible.builtin.stat:
+        path: /srv/50ohm.de/50ohm/build
+      register: build_stat
+      failed_when: not build_stat.stat.exists
+
+    - name: Check refresh script is installed
+      ansible.builtin.stat:
+        path: /srv/50ohm.de/refresh-50ohm.sh
+      register: script_stat
+      failed_when: not script_stat.stat.exists or not script_stat.stat.executable
+
+    - name: Check systemd timer is enabled
+      ansible.builtin.command: systemctl is-enabled refresh-50ohm.timer
+      changed_when: false
+      failed_when: result.rc != 0
+      register: result

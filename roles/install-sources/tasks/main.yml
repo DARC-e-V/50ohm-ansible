@@ -1,3 +1,19 @@
+- name: Create fiftyohm group
+  ansible.builtin.group:
+    name: "{{ fiftyohm_group }}"
+    system: true
+    state: present
+
+- name: Create fiftyohm user
+  ansible.builtin.user:
+    name: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    system: true
+    shell: /usr/sbin/nologin
+    home: "{{ destination_path }}"
+    create_home: false
+    state: present
+
 - name: Create destination directory {{ destination_path }}
   ansible.builtin.file:
     dest: "{{ destination_path }}"
