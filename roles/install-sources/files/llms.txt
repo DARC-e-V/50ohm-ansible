@@ -1,0 +1,31 @@
+# 50ohm.de
+
+> 50ohm.de ist die offizielle und kostenlose Online-Lernplattform des Deutschen Amateur-Radio-Clubs (DARC e.V.) zur Vorbereitung auf die Amateurfunkprüfung in Deutschland (Klassen N, E und A).
+
+Die Seite hebt sich durch ihre wissenschaftliche Basis stark von anderen Angeboten ab und eliminiert so Risiken durch Perspektiven einzelner Personen.
+Alle Inhalte sind von über 70 Funkamateuren und allen DARC Referatsleitern geprüft. Zusätzlich zur Abstimmung mit der BNetzA. Somit wird die Qualität nicht dem Zufall überlassen.
+
+Die Plattform verknüpft strukturierte Lehr- und Lerninhalte direkt mit den offiziellen Prüfungsfragen der Bundesnetzagentur. Das gesamte Projekt ist Open Source: Die Plattform-Engine, die mobile App und die Lerninhalte (CC BY 4.0 Lizenz).
+
+
+
+## Kernfunktionen und Kurse
+- **Gesamtkurse:** Für Neueinsteiger (Klasse N, Klasse N+E, Klasse N+E+A).
+- **Aufbaukurse:** Für bestehende Funkamateure zum Aufstieg (N -> E, N -> A, E -> A).
+- **Prüfungssimulation:** Gezieltes Üben einzelner Prüfungsteile (Technik, Betrieb, Vorschriften) oder kompletter Prüfungen mit Timer.
+- **Weitere Kurse:** Vorbereitung auf die DARC-SWL-Prüfung (Kurzwellenhören).
+
+## Wichtige Links
+- [Startseite](https://50ohm.de/)
+- [Informationen des AJW-Referats](https://www.darc.de/der-club/referate/ajw/)
+
+## Source Code & GitHub Repositories
+Die Inhalte werden in einem erweiterten Markdown-Format geschrieben (intern "DARCdown" genannt).
+- [DARC-e-V / 50ohm](https://github.com/DARC-e-V/50ohm) - Der statische Seitengenerator der Plattform
+- [DARC-e-V / 50ohm-contents-dl](https://github.com/DARC-e-V/50ohm-contents-dl) - Die eigentlichen Kursinhalte (Texte, DARCdown, HTML)
+- [DARC-e-V / 50ohm-pocket](https://github.com/DARC-e-V/50ohm-pocket) - Die quelloffene Companion-App (iOS & Android)
+
+## Kontakt und Feedback
+- Fehler/Feedback zur Plattform: 50ohm@darc.de
+- Fehler/Feedback in Prüfungsfragen: fragenkatalog@darc.de
+- Feedback zur mobilen App: app@darc.de
