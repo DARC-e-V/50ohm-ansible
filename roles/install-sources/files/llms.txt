@@ -1,0 +1,81 @@
+# 50ohm.de
+
+> 50ohm.de ist die offizielle, kostenfreie und quelloffene Lernplattform des Deutschen Amateur-Radio-Clubs (DARC e. V.) zur systematischen Vorbereitung auf die Amateurfunkprüfung bei der Bundesnetzagentur (BNetzA) für die Lizenzklassen N, E und A.
+
+50ohm.de bietet ein evidenzbasiertes, didaktisch aufbereitetes Lernsystem für angehende und aktive Funkamateure. Die Lerninhalte wurden von über 70 Fachexperten und allen Referatsleitern des DARC e. V. verfasst, qualitätsgesichert und in Abstimmung mit dem Fragenkatalog der Bundesnetzagentur entwickelt. Die Plattform kombiniert verständliche Fachtexte, Schaltskizzen, interaktive Fragen und Prüfungssimulationen nach den aktuellen Prüfungsordnungen (Klassen N, E und A).
+
+Alle Lehrtexte stehen unter der freien Lizenz Creative Commons Namensnennung 4.0 International (CC BY 4.0). Sämtliche Softwarekomponenten der Plattform (statische Seitengenerierung, DARCdown-Inhalte und mobile App) sind quelloffen (Open Source).
+
+## Kurse & Lernpfade
+
+- [Klasse N – Einsteigerkurs](https://50ohm.de/N_course_index.html): Vollständiger Lehrgang für Neueinsteiger zum Erwerb der Einsteiger-Lizenzklasse N (UKW 2m/70cm, max. 10 W EIRP). Beinhaltet Grundlagen der Technik (TN), Betriebstechnik (BV) und gesetzliche Vorschriften (VO).
+- [Klasse E – Novice-Gesamtkurs](https://50ohm.de/E_course_index.html): Gesamtkurs für den Direkteinstieg in die Lizenzklasse E (Novice-Lizenz mit VHF/UHF bis 100 W PEP und weltweitem Kurzwellenbetrieb auf zugelassenen Bändern).
+- [Klasse A – Vollständige Lizenz (HAREC)](https://50ohm.de/A_course_index.html): Vollständiger Gesamtkurs für die CEPT-Klasse A mit allen Amateurfunkbändern und voller Sendeleistung (bis 750 W PEP).
+- [Aufbaukurs Klasse N nach E](https://50ohm.de/NE_course_index.html): Didaktisch optimierter Technik-Aufbaulehrgang für Inhaber der Klasse N zum Upgrade auf die Lizenzklasse E.
+- [Aufbaukurs Klasse E nach A](https://50ohm.de/EA_course_index.html): Didaktisch optimierter Technik-Aufbaulehrgang für Inhaber der Klasse E zum Erwerb der vollen HAREC-Klasse A.
+- [Aufbaukurs Klasse N nach A](https://50ohm.de/NEA_course_index.html): Direkter Technik-Aufstiegskurs von der Einsteigerklasse N zur vollen Lizenzklasse A.
+- [SWL-Kurs (Kurzwellenhörer)](https://50ohm.de/SWL_course_index.html): Lehrgang für den Einstieg in den Empfangsamateurfunk und zur Erlangung des DARC-SWL-Abzeichens / Hörer-Rufzeichens.
+
+## Fachkapitel & Themenschwerpunkte
+
+- [Klasse N: Erste Schritte & Funkbetrieb](https://50ohm.de/N_chapter_n_erste_schritte.html): Einführung in den Amateurfunkdienst, Betriebsarten und Stationsaufbau.
+- [Klasse N: Betriebsabwicklung](https://50ohm.de/N_chapter_n_betriebsabwicklung.html): Sprechfunkverfahren, Funkdisziplin, Relais- und Simplex-Betrieb sowie Rapportsysteme (RST).
+- [Klasse N: Abkürzungen & Buchstabieralphabete](https://50ohm.de/N_chapter_n_abkuerzungen.html): Q-Gruppen, ICAO-/NATO-Buchstabieralphabet und internationale Funkabkürzungen.
+- [Klasse N: Logbuch & QSL-Karten](https://50ohm.de/N_chapter_n_logbuch_und_qsl_karten.html): Führung des Stationslogbuchs, UTC-Zeitrechnung und weltweiter Austausch von QSL-Karten.
+- [Klasse N: Gesetze & Vorschriften](https://50ohm.de/N_chapter_n_gesetze_und_vorschriften.html): Amateurfunkgesetz (AFuG), Amateurfunkverordnung (AFuV), Frequenzbereiche, Lizenzklassen und behördliche Zuständigkeiten.
+- [Klasse N: Bauteile & Grundschaltungen](https://50ohm.de/N_chapter_n_bauteile_und_schaltkreise.html): Passive und aktive Bauelemente, Widerstände, Kondensatoren, Spulen und Basisschaltungen.
+- [Klasse N: Transceiver & Funktechnik](https://50ohm.de/N_chapter_n_transceiver.html): Aufbau von Sende-Empfangs-Geräten, Signalverarbeitung und Bedienung.
+- [Klasse N: Antennen & Leitungen](https://50ohm.de/N_chapter_n_antennen_und_leitungen.html): Antennenformen (Dipole, Vertikals), Speiseleitungen, Wellenwiderstand und Stehwellenverhältnis (SWR).
+- [Klasse N: Wellenausbreitung](https://50ohm.de/N_chapter_n_frequenz_und_wellenausbreitung.html): Grundlagen elektromagnetischer Wellen, VHF/UHF-Ausbreitung und Quasioptik.
+- [Klasse N: Station & Sicherheit](https://50ohm.de/N_chapter_n_amateurfunkstationen.html): Elektrische Sicherheit, Erdung, Blitzschutz und Schutzabstände im Nahfeld.
+- [Klasse E: Technik-Lehrstoff](https://50ohm.de/E_chapter_e_grundlegende_schaltungen.html): Vertiefte Schaltungstechnik, Schwingkreise, Filter, HF-Verstärker, Kurzwellenausbreitung und EMV-Grundlagen.
+- [Klasse A: Höhere Schaltungstechnik & DSP](https://50ohm.de/A_chapter_a_grundlegende_schaltungen.html): Komplexe Filterschaltungen, Mischer, Oszillatoren (DDS, PLL), Digitale Signalverarbeitung (DSP, ADC/DAC, IQ-Verfahren) und fortgeschrittene Modulationsarten.
+- [Klasse A: Antennen, Leitungen & BEMFV](https://50ohm.de/A_chapter_a_antennen_uebertragungsleitungen.html): Leitungsanpassung, Transformationsglieder, Smith-Diagramm-Grundlagen, Strahlungsdiagramme und Personenschutzberechnungen nach BEMFV.
+
+## Werkzeuge, Prüfungsunterlagen & Simulation
+
+- [Prüfungssimulation](https://50ohm.de/sim): Online-Prüfungssimulator mit originalen Prüfungsfragen, Zeitmessung und Auswertung nach BNetzA-Bestehensgrenzen.
+- [BNetzA-Fragenkatalog](https://50ohm.de/fk): Offizieller Prüfungsfragenkatalog der Bundesnetzagentur für die Klassen N, E und A.
+- [BNetzA-Hilfsmittel & Formelsammlung](https://50ohm.de/hm): Amtliche Hilfsmittel, Formelsammlungen, Tabellen und Schaltbilder für die Amateurfunkprüfung.
+- [Prüfungs-Formelsammlung](https://50ohm.de/fs): Direkter Zugriff auf den Formelteil der BNetzA-Prüfungsunterlagen.
+- [Prüfungs-Bandpläne](https://50ohm.de/bp): Auszug der IARU-/BNetzA-Bandpläne und Frequenztabellen aus den Prüfungsunterlagen.
+- [BNetzA-Prüfungstermine & Anmeldung](https://50ohm.de/prf): Informationen zu Prüfungsterminen, Prüfungsstandorten und FAQs der Bundesnetzagentur.
+- [Antrag auf Zulassung zur Prüfung](https://50ohm.de/ant): Offizielles BNetzA-Formblatt für die Prüfungsanmeldung und Zuteilung eines personengebundenen Rufzeichens.
+- [BNetzA-Gebührenverordnung](https://50ohm.de/geb): Amtliche Übersicht der Gebühren und Auslagen für Prüfungen und Zuteilungen (BMDVTKBGebV).
+
+## Vorschriften, Rufzeichen & Nachweisverfahren
+
+- [AFuV Anlage 1 – Frequenzbereiche & Sendeleistungen](https://50ohm.de/a1): Gesetzliche Zuteilungstabelle aller Amateurfunkbänder mit Status, maximalen Leistungen und zulässigen Klassen.
+- [BNetzA-Rufzeichenplan](https://50ohm.de/rzp): Amtlicher Rufzeichenplan für den Amateurfunkdienst in Deutschland (Klassen-Präfixe DO, DL, DB, DF, DG, DH, DJ, DK, DM usw.).
+- [BNetzA-Rufzeichenabfrage](https://50ohm.de/rza): Online-Abfragesystem der Bundesnetzagentur zur Überprüfung freier und vergebener Rufzeichen.
+- [BNetzA-Rufzeichenliste](https://50ohm.de/rzl): Verzeichnis der zugeteilten deutschen Amateurfunkrufzeichen.
+- [BEMFV-Bewertungsverfahren](https://50ohm.de/bemfv): Erläuterungen und Formeln der BNetzA zur Anzeige von Amateurfunkanlagen nach der Verordnung über elektromagnetische Felder.
+- [BEMFV-Anleitung zur Anzeige](https://50ohm.de/abemfv): Offizieller Leitfaden zur Erstellung und Einreichung der Standortbescheinigung/Selbsterklärung.
+- [CEPT-Länderliste](https://50ohm.de/cll): Übersicht zur weltweiten Nutzung deutscher Amateurfunklizenzen im Ausland nach CEPT T/R 61-01 und ECC Recommendation (05)06.
+
+## Open Source Repositories & Infrastruktur
+
+- [50ohm Generator (GitHub)](https://github.com/DARC-e-V/50ohm): Quellcode des statischen Seitengenerators der Lernplattform (Python / Jinja2).
+- [50ohm Kursinhalte (GitHub)](https://github.com/DARC-e-V/50ohm-contents-dl): Vollständige Lehrtexte, Grafiken und Übungsfragen im Markdown-Format (DARCdown), lizenziert unter CC BY 4.0.
+- [50ohm Pocket App (GitHub)](https://github.com/DARC-e-V/50ohm-pocket): Quelloffene Offline-Begleit-App für iOS und Android.
+- [50ohm Ansible Deployment (GitHub)](https://github.com/DARC-e-V/50ohm-ansible): Ansible-Automatisierung für Server-Setup und kontinuierliche Bereitstellung von 50ohm.de.
+
+## Organisation & Weiterführende Links
+
+- [DARC-Referat AJW](https://50ohm.de/ajw): Referat für Ausbildung, Jugend und Weiterbildung des DARC e. V.
+- [DARC-Ortsverbandssuche](https://50ohm.de/ov): Lokale Amateurfunkclubs vor Ort finden für Mentoring, Praxistage und gemeinsame Funkaktivitäten.
+- [DARC-Referat Notfunk](https://50ohm.de/rnf): Informationen zu Not- und Katastrophenfunk in Deutschland.
+- [DARC-Referat Ausland](https://50ohm.de/ra): Richtlinien und Beratung für Funkbetrieb im Ausland und Expeditionen.
+- [DARC-Kurzwellenhörer (SWL)](https://50ohm.de/swl): Fachinformationen zum Empfangsamateurfunk.
+- [DARC-Lehrbuch Klasse N](https://50ohm.de/buch): Das gedruckte Begleitbuch zum Einsteigerkurs im DARC-Verlag.
+- [DARC-Mitgliedsantrag](https://50ohm.de/mw): Online-Mitgliedschaft im Deutschen Amateur-Radio-Club e. V. beantragen.
+
+## Optional
+
+- [DARC Contest & Diplom Logbuch](https://50ohm.de/log): Zentrales Logportal (DCL) für Amateurfunk-Diplome und Contest-Auswertungen.
+- [Wavelog Cloud-Logbuch](https://50ohm.de/wl): Modernes webbasiertes Open-Source-Amateurfunk-Logbuch.
+- [Draußenfunker](https://50ohm.de/df): Portal für portablen Amateurfunk im Freien (SOTA, POTA, GMA).
+- [APRS Karte](https://50ohm.de/aprs): Weltweite Positionsverfolgung von Amateurfunkstationen via Automatic Packet Reporting System.
+- [PSK Reporter](https://50ohm.de/psk): Echtzeitkarte globaler digitaler Signalempfänge zur Beurteilung der aktuellen Wellenausbreitung.
+- [Reverse Beacon Network](https://50ohm.de/rbn): Weltweites Netzwerk automatischer CW- und RTTY-Empfänger.
+- [WSPRnet](https://50ohm.de/wsprn): Schwachsignal-Ausbreitungskarte (Weak Signal Propagation Reporter).

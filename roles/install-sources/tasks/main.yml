@@ -45,3 +45,22 @@
     group: "{{ fiftyohm_group }}"
     mode: '0644'
   notify: Reload nginx to apply new configuration
+
+- name: Create custom directory for static files
+  ansible.builtin.file:
+    dest: "{{ destination_path }}/custom"
+    state: directory
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0755'
+
+- name: Deploy static files (sitemap.xml, llms.txt)
+  ansible.builtin.copy:
+    src: "files/{{ item }}"
+    dest: "{{ destination_path }}/custom/{{ item }}"
+    owner: "{{ fiftyohm_user }}"
+    group: "{{ fiftyohm_group }}"
+    mode: '0644'
+  loop:
+    - sitemap.xml
+    - llms.txt

@@ -50,6 +50,13 @@ nginx_vhosts:
         try_files $uri $uri/ =404;
       }
 
+      location = /sitemap.xml {
+        alias {{ destination_path }}/custom/sitemap.xml;
+      }
+      location = /llms.txt {
+        alias {{ destination_path }}/custom/llms.txt;
+      }
+
       ssl_certificate /etc/letsencrypt/live/50ohm.de/fullchain.pem;
       ssl_certificate_key /etc/letsencrypt/live/50ohm.de/privkey.pem;
       include /srv/50ohm.de/url_shortener.conf;
